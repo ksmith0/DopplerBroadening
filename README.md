@@ -10,3 +10,5 @@ where the arguments are as follows:
  * dThetaDeg The angular coverage of the detector in degrees.
  * resolutionConst The constant term in the 1/sqrt(e) resolution term.
  * dBeta The change in beta. 
+
+Further documentation is available at https://ksmith0.github.io/DopplerBroadening.
