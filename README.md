@@ -1,5 +1,7 @@
 Doppler Broadening
 ===
+**NOTE** This branch contains documentation for the methods and classes in the project available at https://ksmith0.github.io/DopplerBroadening.
+
 The project provide the DopplerBroadening class as well as a simple method to create plots. This method can be envoked from root by the following:
 ```
 .x DopplerBroadening.C(energyMeV, beta, dThetaDeg, resolutionConst, dBeta)

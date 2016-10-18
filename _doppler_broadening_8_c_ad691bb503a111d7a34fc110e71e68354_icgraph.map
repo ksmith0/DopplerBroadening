@@ -1,0 +1,7 @@
+<map id="DopplerShift" name="DopplerShift">
+<area shape="rect" id="node2" href="$_doppler_broadening_8_c.html#a25be0c2a04ce94bb823f2c85d0522d76" title="Computes the Doppler broadening in resolution for the given angle and parameters. ..." alt="" coords="148,31,276,57"/>
+<area shape="rect" id="node3" href="$_doppler_broadening_8_c.html#afe9783be2e427448a1f45d3232d7db3a" title="Returns the total broadening due to energy shift, opening angle and spread in beta values..." alt="" coords="324,5,440,32"/>
+<area shape="rect" id="node6" href="$_doppler_broadening_8_c.html#a839c4bb9f77658373412eb995de144e5" title="Returns a TF1 describing the change in energy resolution due to gamma energy Doppler shift..." alt="" coords="488,56,637,83"/>
+<area shape="rect" id="node4" href="$_doppler_broadening_8_c.html#a6c85361fcf7bb28f9792bfbf78f22860" title="Returns a TF1 describing the change in energy resolution due to. " alt="" coords="494,5,631,32"/>
+<area shape="rect" id="node5" href="$_doppler_broadening_8_c.html#aa22ebb11ce644aca6f7e7459ec97ba4a" title="Plots the broadening due to Doppler effects including energy shift,. " alt="" coords="685,31,817,57"/>
+</map>

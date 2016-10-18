@@ -1,0 +1,4 @@
+<map id="DopplerBroadening::SolidAngleBroadening" name="DopplerBroadening::SolidAngleBroadening">
+<area shape="rect" id="node2" href="$class_doppler_broadening.html#a91f658dd93fcd472272c8b331d48925e" title="Default Constructor. " alt="" coords="391,5,531,47"/>
+<area shape="rect" id="node3" href="$class_doppler_broadening.html#ad52ad66a73ac6bf163e2d3a14b6c4b35" title="Returns the total broadening due to energy shift, opening angle and spread in beta values..." alt="" coords="203,35,343,76"/>
+</map>

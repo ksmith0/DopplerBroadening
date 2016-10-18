@@ -1,0 +1,8 @@
+<map id="DopplerBroadening::DopplerBroadening" name="DopplerBroadening::DopplerBroadening">
+<area shape="rect" id="node2" href="$class_doppler_broadening.html#aaf952340b4f6236c39888120198a1655" title="Computes the Doppler broadening in resolution for the given angle and parameters. ..." alt="" coords="386,5,526,47"/>
+<area shape="rect" id="node4" href="$class_doppler_broadening.html#a166393fdef367cb7de4f3d1bf618eac4" title="Computes the resolution broadening due to opening angle of the detector. " alt="" coords="381,75,531,116"/>
+<area shape="rect" id="node5" href="$class_doppler_broadening.html#a679394e602db5e4cd0ded64fbee25f67" title="Returns the total broadening due to energy shift, opening angle and spread in beta values..." alt="" coords="386,149,526,191"/>
+<area shape="rect" id="node6" href="$class_doppler_broadening.html#ad52ad66a73ac6bf163e2d3a14b6c4b35" title="Returns the total broadening due to energy shift, opening angle and spread in beta values..." alt="" coords="193,109,333,151"/>
+<area shape="rect" id="node7" href="$class_doppler_broadening.html#a94733541cd419404a7bd9403c31af67d" title="Updates the parameters for each TF1 when called. " alt="" coords="193,227,333,268"/>
+<area shape="rect" id="node3" href="$class_doppler_broadening.html#a466c76ae100d5544793dd6768154518e" title="Computes the Doppler shift for the given angle and parameters. " alt="" coords="579,5,719,47"/>
+</map>

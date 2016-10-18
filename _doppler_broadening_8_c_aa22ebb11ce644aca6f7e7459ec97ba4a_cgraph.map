@@ -1,0 +1,11 @@
+<map id="DopplerBroadening" name="DopplerBroadening">
+<area shape="rect" id="node2" href="$_doppler_broadening_8_c.html#a6c85361fcf7bb28f9792bfbf78f22860" title="Returns a TF1 describing the change in energy resolution due to. " alt="" coords="185,56,323,83"/>
+<area shape="rect" id="node8" href="$_doppler_broadening_8_c.html#a839c4bb9f77658373412eb995de144e5" title="Returns a TF1 describing the change in energy resolution due to gamma energy Doppler shift..." alt="" coords="381,5,531,32"/>
+<area shape="rect" id="node9" href="$_doppler_broadening_8_c.html#a78e1ed74c6fc049d267f5425b7b9d813" title="Returns a TF1 describing the change in energy resolution due to. " alt="" coords="371,107,541,133"/>
+<area shape="rect" id="node10" href="$_doppler_broadening_8_c.html#a8c73f215ab976eed5e95735e4f517e5d" title="Returns a TF1 describing the change in energy resolution due to. " alt="" coords="187,157,321,184"/>
+<area shape="rect" id="node3" href="$_doppler_broadening_8_c.html#afe9783be2e427448a1f45d3232d7db3a" title="Returns the total broadening due to energy shift, opening angle and spread in beta values..." alt="" coords="398,56,514,83"/>
+<area shape="rect" id="node4" href="$_doppler_broadening_8_c.html#a25be0c2a04ce94bb823f2c85d0522d76" title="Computes the Doppler broadening in resolution for the given angle and parameters. ..." alt="" coords="600,19,728,45"/>
+<area shape="rect" id="node6" href="$_doppler_broadening_8_c.html#ae4370d11dc942034629acf7db1a9de42" title="Computes the resolution broadening due to opening angle of the detector. " alt="" coords="589,95,739,121"/>
+<area shape="rect" id="node7" href="$_doppler_broadening_8_c.html#a4891363a664eb947e893af6d7e63bcd9" title="Returns the total broadening due to energy shift, opening angle and spread in beta values..." alt="" coords="607,145,721,172"/>
+<area shape="rect" id="node5" href="$_doppler_broadening_8_c.html#ad691bb503a111d7a34fc110e71e68354" title="Computes the Doppler shift for the given angle and parameters. " alt="" coords="787,19,881,45"/>
+</map>

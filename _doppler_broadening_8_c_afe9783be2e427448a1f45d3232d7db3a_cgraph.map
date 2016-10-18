@@ -1,0 +1,6 @@
+<map id="TotalBroadening" name="TotalBroadening">
+<area shape="rect" id="node2" href="$_doppler_broadening_8_c.html#a25be0c2a04ce94bb823f2c85d0522d76" title="Computes the Doppler broadening in resolution for the given angle and parameters. ..." alt="" coords="180,5,308,32"/>
+<area shape="rect" id="node4" href="$_doppler_broadening_8_c.html#ae4370d11dc942034629acf7db1a9de42" title="Computes the resolution broadening due to opening angle of the detector. " alt="" coords="169,56,319,83"/>
+<area shape="rect" id="node5" href="$_doppler_broadening_8_c.html#a4891363a664eb947e893af6d7e63bcd9" title="Returns the total broadening due to energy shift, opening angle and spread in beta values..." alt="" coords="187,107,301,133"/>
+<area shape="rect" id="node3" href="$_doppler_broadening_8_c.html#ad691bb503a111d7a34fc110e71e68354" title="Computes the Doppler shift for the given angle and parameters. " alt="" coords="367,5,461,32"/>
+</map>
