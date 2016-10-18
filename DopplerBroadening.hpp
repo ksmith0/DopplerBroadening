@@ -68,10 +68,13 @@ class DopplerBroadening {
 		/// @brief Computes the Doppler shift for the given angle and parameters.
 		/// @param[in] ang The angle value in degrees, index corresponds to power - 1.
 		/// @param[in] par The parameters of the function.
-		/// @return The shifted energy of the gamma-ray do to Doppler effect in MeV.
 		/// The parameters are:
-		/// 	0: Emitted gamma ray energy.
-		///	1: The beta value of the frame of reference.
+		///	* par[0] - Emitted gamma ray energy, \f$ E_\gamma \f$.
+		///	* par[1] - The beta value, \f$\beta\f$, of the frame of reference.
+		/// @return The shifted energy of the gamma-ray do to Doppler effect in MeV.
+		/// \f[
+		///	E' = E_\gamma \frac{1-\beta^2}{1-\beta cos\theta}
+		/// \f]
 		static Double_t DopplerShift(Double_t *ang, Double_t *par) {
 			return ( par[0] * ( 1 - pow(par[1], 2) ) / 
 					( 1 - par[1] * cos( ang[0] * TMath::DegToRad() ) ) );
@@ -81,12 +84,16 @@ class DopplerBroadening {
 		///         and parameters.
 		/// @param[in] ang The angle value in degrees, index corresponds to power - 1.
 		/// @param[in] par The parameters of the function.
-		/// @return The energy resolution expected at the given angle.
 		/// The parameters are:
-		/// 	0: Emitted gamma ray energy.
-		///	1: The beta value of the frame of reference.
-		///	3: The constant in \f$\frac{1}{\sqrt{E}}\f$ term that defines 
+		///	* par[0] - Emitted gamma ray energy, \f$ E_\gamma \f$.
+		///	* par[1] - The beta value, \f$\beta\f$, of the frame of reference.
+		///	* par[3] - The constant in \f$\frac{1}{\sqrt{E}}\f$ term that defines 
 		///		detector resolution in units of \f$\sqrt{MeV}\f$.
+		/// @return The energy resolution expected at the given angle from the doppler
+		///	shifted energy \f$E'\f$.
+		/// \f[
+		///	\frac{dE}{E}_{E'} = \frac{1}{\sqrt{E_{detected}}}
+		/// \f]
 		static Double_t EnergyBroadening(Double_t *ang, Double_t *par) {
 			return ( par[3] / sqrt( DopplerShift(ang, par) ) );
 		};
@@ -95,11 +102,14 @@ class DopplerBroadening {
 		///         detector.
 		/// @param[in] ang The angle value in degrees, index corresponds to power - 1.
 		/// @param[in] par The parameters of the function.
-		/// @return The broadening for given parameters and angle.
 		/// The parameters are:
-		/// 	0: Emitted gamma ray energy.
-		///	1: The beta value of the frame of reference.
-		///	2: The opening angle of the detector in radians.
+		///	* par[0] - Emitted gamma ray energy, \f$ E_\gamma \f$.
+		///	* par[1] - The beta value, \f$\beta\f$, of the frame of reference.
+		///	* par[2] - The opening angle of the detector, \f$\Theta\f$, in radians.
+		/// @return The broadening for given parameters and angle.
+		/// \f[
+		///	\frac{dE}{E}_{d\Omega} = \frac{\Theta \beta sin\theta}{1-\beta cos\theta}
+		/// \f]
 		static Double_t SolidAngleBroadening(Double_t *ang, Double_t *par) {
 			Double_t angleRad = ang[0] * TMath::DegToRad();
 			return ( par[2] * par[1] * sin( angleRad ) / 
@@ -110,10 +120,13 @@ class DopplerBroadening {
 		///         spread in beta values.
 		/// @param[in] ang The angle value in degrees, index corresponds to power - 1.
 		/// @param[in] par The parameters of the function.
-		/// @return The total broadening expected.
 		/// The parameters are:
-		///	1: The beta value of the frame of reference.
-		///	4: The width of the beta distribution.
+		///	* par[1] - The beta value, \f$\beta\f$, of the frame of reference.
+		///	* par[4] - The width of the beta distribution, \f$d\beta\f$.
+		/// @return The total broadening expected.
+		/// \f[
+		///	\frac{dE}{E}_{d\beta} = \frac{\delta\beta |cos\theta - \beta|}{(1 - \beta cos\theta)(1-\beta^2)}
+		/// \f]
 		static Double_t BetaBroadening(Double_t *ang, Double_t *par) {
 			Double_t angleRad = ang[0] * TMath::DegToRad();
 			return ( par[4] * abs( cos(angleRad) - par[1]) / 
@@ -127,6 +140,9 @@ class DopplerBroadening {
 		/// @param[in] ang The angle value in degrees, index corresponds to power - 1.
 		/// @param[in] par The parameters of the function.
 		/// @return The total broadening expected.
+		/// \f[
+		///	\frac{dE}{E} = \sqrt{\frac{dE}{E}_{E'}^2 + \frac{dE}{E}_{d\Omega}^2 + \frac{dE}{E}_{d\beta}^2}
+		/// \f]
 		static Double_t TotalBroadening(Double_t *ang, Double_t *par) {
 			return ( sqrt( pow(EnergyBroadening(ang, par),2) + 
 						pow(SolidAngleBroadening(ang, par), 2 ) + 
