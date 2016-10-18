@@ -1,0 +1,6 @@
+*.swp
+*_cpp.d
+*_cpp.so
+*_C.d
+*_C.so
+doc/
