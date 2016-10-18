@@ -183,7 +183,7 @@ float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="cla
 <tr class="separator:ae3cc4d08849f6e739e32b948ea111c1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a112bde84ae0be947349f04498ef9019f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a112bde84ae0be947349f04498ef9019f"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doppler_broadening.html#a112bde84ae0be947349f04498ef9019f">resolutionConst_</a></td></tr>
-<tr class="memdesc:a112bde84ae0be947349f04498ef9019f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant term in <img class="formulaInl" alt="$ \frac{1}{\sqrt{E}} $" src="form_3.png"/> of resolution function. <br /></td></tr>
+<tr class="memdesc:a112bde84ae0be947349f04498ef9019f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constant term in <img class="formulaInl" alt="$ \frac{1}{\sqrt{E}} $" src="form_1.png"/> of resolution function. <br /></td></tr>
 <tr class="separator:a112bde84ae0be947349f04498ef9019f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4fc28207f63db5daa792a51d236c4d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4fc28207f63db5daa792a51d236c4d0"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_doppler_broadening.html#ac4fc28207f63db5daa792a51d236c4d0">dBeta_</a></td></tr>
@@ -323,13 +323,20 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ang</td><td>The angle value in degrees, index corresponds to power - 1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">par</td><td>The parameters of the function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">par</td><td>The parameters of the function. The parameters are:<ul>
+<li>par[1] - The beta value, <img class="formulaInl" alt="$\beta$" src="form_7.png"/>, of the frame of reference.</li>
+<li>par[4] - The width of the beta distribution, <img class="formulaInl" alt="$d\beta$" src="form_21.png"/>. </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The total broadening expected. The parameters are: 1: The beta value of the frame of reference. 4: The width of the beta distribution. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The total broadening expected. <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \frac{dE}{E}_{d\beta} = \frac{\delta\beta |cos\theta - \beta|}{(1 - \beta cos\theta)(1-\beta^2)} \]" src="form_22.png"/>
+</p>
+ </dd></dl>
 
-<p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00117">117</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00130">130</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -380,13 +387,20 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ang</td><td>The angle value in degrees, index corresponds to power - 1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">par</td><td>The parameters of the function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">par</td><td>The parameters of the function. The parameters are:<ul>
+<li>par[0] - Emitted gamma ray energy, <img class="formulaInl" alt="$ E_\gamma $" src="form_6.png"/>.</li>
+<li>par[1] - The beta value, <img class="formulaInl" alt="$\beta$" src="form_7.png"/>, of the frame of reference. </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The shifted energy of the gamma-ray do to Doppler effect in MeV. The parameters are: 0: Emitted gamma ray energy. 1: The beta value of the frame of reference. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The shifted energy of the gamma-ray do to Doppler effect in MeV. <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ E' = E_\gamma \frac{1-\beta^2}{1-\beta cos\theta} \]" src="form_17.png"/>
+</p>
+ </dd></dl>
 
-<p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00075">75</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00078">78</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -438,13 +452,21 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ang</td><td>The angle value in degrees, index corresponds to power - 1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">par</td><td>The parameters of the function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">par</td><td>The parameters of the function. The parameters are:<ul>
+<li>par[0] - Emitted gamma ray energy, <img class="formulaInl" alt="$ E_\gamma $" src="form_6.png"/>.</li>
+<li>par[1] - The beta value, <img class="formulaInl" alt="$\beta$" src="form_7.png"/>, of the frame of reference.</li>
+<li>par[3] - The constant in <img class="formulaInl" alt="$\frac{1}{\sqrt{E}}$" src="form_3.png"/> term that defines detector resolution in units of <img class="formulaInl" alt="$\sqrt{MeV}$" src="form_4.png"/>. </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The energy resolution expected at the given angle. The parameters are: 0: Emitted gamma ray energy. 1: The beta value of the frame of reference. 3: The constant in <img class="formulaInl" alt="$\frac{1}{\sqrt{E}}$" src="form_4.png"/> term that defines detector resolution in units of <img class="formulaInl" alt="$\sqrt{MeV}$" src="form_5.png"/>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The energy resolution expected at the given angle from the doppler shifted energy <img class="formulaInl" alt="$E'$" src="form_18.png"/>. <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \frac{dE}{E}_{E'} = \frac{1}{\sqrt{E_{detected}}} \]" src="form_19.png"/>
+</p>
+ </dd></dl>
 
-<p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00090">90</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00097">97</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -491,7 +513,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Returns a TF1 describing the change in energy resolution due to the distribution of beta values. </p>
-<dl class="section return"><dt>Returns</dt><dd>A TF1 object with the change in energy resolution due to beta distribution width as a function of polar angle <img class="formulaInl" alt="$\theta$" src="form_6.png"/> in degrees. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A TF1 object with the change in energy resolution due to beta distribution width as a function of polar angle <img class="formulaInl" alt="$\theta$" src="form_0.png"/> in degrees. </dd></dl>
 
 <p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00043">43</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
 
@@ -529,7 +551,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Returns a TF1 describing the change in energy resolution due to gamma energy doppler shift. </p>
-<dl class="section return"><dt>Returns</dt><dd>A TF1 object with the change in energy resolution due to energy shift as a function of polar angle <img class="formulaInl" alt="$\theta$" src="form_6.png"/> in degrees. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A TF1 object with the change in energy resolution due to energy shift as a function of polar angle <img class="formulaInl" alt="$\theta$" src="form_0.png"/> in degrees. </dd></dl>
 
 <p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00029">29</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
 
@@ -567,7 +589,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Returns a TF1 describing the change in energy resolution due to the solid angle coverage of the detector. </p>
-<dl class="section return"><dt>Returns</dt><dd>A TF1 object with the change in energy resolution due to opening angle of the detector as a function of polar angle <img class="formulaInl" alt="$\theta$" src="form_6.png"/> in degrees. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A TF1 object with the change in energy resolution due to opening angle of the detector as a function of polar angle <img class="formulaInl" alt="$\theta$" src="form_0.png"/> in degrees. </dd></dl>
 
 <p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00036">36</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
 
@@ -605,7 +627,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Returns a TF1 describing the change in energy resolution due to gamma energy doppler shift, the solid angle coverage of the detector and the distribution of beta values. </p>
-<dl class="section return"><dt>Returns</dt><dd>A TF1 object with the change in energy resolution due to energy shift, opening angle of the detector, and beta distribution width as a function of polar angle <img class="formulaInl" alt="$\theta$" src="form_6.png"/> in degrees. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A TF1 object with the change in energy resolution due to energy shift, opening angle of the detector, and beta distribution width as a function of polar angle <img class="formulaInl" alt="$\theta$" src="form_0.png"/> in degrees. </dd></dl>
 
 <p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00051">51</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
 
@@ -667,13 +689,21 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ang</td><td>The angle value in degrees, index corresponds to power - 1. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">par</td><td>The parameters of the function. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">par</td><td>The parameters of the function. The parameters are:<ul>
+<li>par[0] - Emitted gamma ray energy, <img class="formulaInl" alt="$ E_\gamma $" src="form_6.png"/>.</li>
+<li>par[1] - The beta value, <img class="formulaInl" alt="$\beta$" src="form_7.png"/>, of the frame of reference.</li>
+<li>par[2] - The opening angle of the detector, <img class="formulaInl" alt="$\Theta$" src="form_11.png"/>, in radians. </li>
+</ul>
+</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The broadening for given parameters and angle. The parameters are: 0: Emitted gamma ray energy. 1: The beta value of the frame of reference. 2: The opening angle of the detector in radians. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The broadening for given parameters and angle. <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \frac{dE}{E}_{d\Omega} = \frac{\Theta \beta sin\theta}{1-\beta cos\theta} \]" src="form_20.png"/>
+</p>
+ </dd></dl>
 
-<p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00103">103</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00113">113</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -728,9 +758,12 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The total broadening expected. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The total broadening expected. <p class="formulaDsp">
+<img class="formulaDsp" alt="\[ \frac{dE}{E} = \sqrt{\frac{dE}{E}_{E'}^2 + \frac{dE}{E}_{d\Omega}^2 + \frac{dE}{E}_{d\beta}^2} \]" src="form_23.png"/>
+</p>
+ </dd></dl>
 
-<p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00130">130</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
+<p>Definition at line <a class="el" href="_doppler_broadening_8hpp_source.html#l00146">146</a> of file <a class="el" href="_doppler_broadening_8hpp_source.html">DopplerBroadening.hpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>

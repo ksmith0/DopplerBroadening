@@ -1,7 +1,24 @@
-\form#0:$ 1/sqrt(E) $
-\form#1:$ 1/\sqrt(E) $
-\form#2:$ \frac{1}{\sqrt(E)} $
-\form#3:$ \frac{1}{\sqrt{E}} $
-\form#4:$\frac{1}{\sqrt{E}}$
-\form#5:$\sqrt{MeV}$
-\form#6:$\theta$
+\form#0:$\theta$
+\form#1:$ \frac{1}{\sqrt{E}} $
+\form#2:\[ \frac{dE}{E} = E_\gamma \frac{1-\beta^2}{1-\beta * cos(\theta)} \]
+\form#3:$\frac{1}{\sqrt{E}}$
+\form#4:$\sqrt{MeV}$
+\form#5:\[ \frac{dE}{E} = E_\gamma \frac{1-\beta^2}{1-\beta * cos\theta} \]
+\form#6:$ E_\gamma $
+\form#7:$\beta$
+\form#8:\[ E_{detected} = E_\gamma \frac{1-\beta^2}{1-\beta * cos\theta} \]
+\form#9:\[ \frac{dE}{E} = \frac{1}{\sqrt{E_{detected}}} \]
+\form#10:\[ \frac{dE}{E} = \frac{\Theta \beta sin\theta}{1-\beta cos\theta} \]
+\form#11:$\Theta$
+\form#12:$\delta\beta$
+\form#13:\[ \frac{dE}{E} = \frac{\delta\beta \abs{cos\theta - \beta}}{(1 - \beta cos\theta)(1-\beta^2)} \]
+\form#14:\[ \frac{dE}{E} = \frac{\delta\beta |cos\theta - \beta|}{(1 - \beta cos\theta)(1-\beta^2)} \]
+\form#15:\[ E_{detected} = E_\gamma \frac{1-\beta^2}{1-\beta cos\theta} \]
+\form#16:\[ \frac{dE}{E} = \sqrt{\frac{dE}{E}_{energy}^2 + \frac{dE}{E}_{solid angle}^2} \]
+\form#17:\[ E' = E_\gamma \frac{1-\beta^2}{1-\beta cos\theta} \]
+\form#18:$E'$
+\form#19:\[ \frac{dE}{E}_{E'} = \frac{1}{\sqrt{E_{detected}}} \]
+\form#20:\[ \frac{dE}{E}_{d\Omega} = \frac{\Theta \beta sin\theta}{1-\beta cos\theta} \]
+\form#21:$d\beta$
+\form#22:\[ \frac{dE}{E}_{d\beta} = \frac{\delta\beta |cos\theta - \beta|}{(1 - \beta cos\theta)(1-\beta^2)} \]
+\form#23:\[ \frac{dE}{E} = \sqrt{\frac{dE}{E}_{E'}^2 + \frac{dE}{E}_{d\Omega}^2 + \frac{dE}{E}_{d\beta}^2} \]
