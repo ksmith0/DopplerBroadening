@@ -22,3 +22,30 @@
 \form#21:$d\beta$
 \form#22:\[ \frac{dE}{E}_{d\beta} = \frac{\delta\beta |cos\theta - \beta|}{(1 - \beta cos\theta)(1-\beta^2)} \]
 \form#23:\[ \frac{dE}{E} = \sqrt{\frac{dE}{E}_{E'}^2 + \frac{dE}{E}_{d\Omega}^2 + \frac{dE}{E}_{d\beta}^2} \]
+\form#24:$\gamma$
+\form#25:$E-\gamma$
+\form#26:\[ E' = E_\gamma \frac{\sqrt(1-\beta^2}{1-\beta cos\theta} \]
+\form#27:\[ E' = E_\gamma \frac{\sqrt{1-\beta^2}}{1-\beta cos\theta} \]
+\form#28:$E_\gamma$
+\form#29:\[ \frac{\delta E'}{E'} = \sqrt{\frac{\partial E'}{\partial E'}\frac{\delta E'}{E'}} \]
+\form#30:\[ \frac{\delta E'}{E'} = \sqrt{ \frac{\partial E'}{\partial E_\gamma}\frac{\delta E_\gamma}{E'} + \frac{\partial E'}{\partial \theta}\frac{\delta \theta}{E'} + \frac{\partial E'}{\partial \beta}\frac{\delta \beta}{E'} + } \]
+\form#31:\[ \frac{\delta E'}{E'} = \sqrt{ \left(\frac{\partial E'}{\partial E_\gamma}\frac{\delta E_\gamma}{E'}\right)^2 + \frac{\partial E'}{\partial \theta}\frac{\delta \theta}{E'} + \frac{\partial E'}{\partial \beta}\frac{\delta \beta}{E'} + } \]
+\form#32:\[ \frac{\delta E'}{E'} = \sqrt{ \left(\frac{\partial E'}{\partial E_\gamma}\frac{\delta E_\gamma}{E'}\right)^2 + \left(\frac{\partial E'}{\partial \theta}\frac{\delta \theta}{E'}\right)^2 + \left(\frac{\partial E'}{\partial \beta}\frac{\delta \beta}{E'}\right)^2 + } \]
+\form#33:\[ \frac{\delta E'}{E'} = \sqrt{ \left(\frac{\partial E'}{\partial E_\gamma}\frac{\delta E_\gamma}{E'}\right)^2 + \left(\frac{\partial E'}{\partial \theta}\frac{\delta \theta}{E'}\right)^2 + \left(\frac{\partial E'}{\partial \beta}\frac{\delta \beta}{E'}\right)^2 } \]
+\form#34:\[ \frac{\partial E'}{\partial E_\gamma} = \frac{\sqrt{1-\beta^2}}{1-\beta cos\theta} = \frac{E'}{E_\gamma} \]
+\form#35:$\frac{\delta E_{int}(E')}{E'}$
+\form#36:$. As the doppler shift causes the $
+\form#37:$\frac{const.}{\sqrt{E}}$
+\form#38:\[ \frac{\delta E'}{E'} = \sqrt{ \left(\frac{\delta E_{int}(E')}{E'}\right)^2 + \left(\frac{\partial E'}{\partial E_\gamma}\frac{\delta E_\gamma}{E'}\right)^2 + \left(\frac{\partial E'}{\partial \theta}\frac{\delta \theta}{E'}\right)^2 + \left(\frac{\partial E'}{\partial \beta}\frac{\delta \beta}{E'}\right)^2 } \]
+\form#39:\[ \frac{\delta E_{int}(E')}{E'} = \frac{const.}{\sqrt{E}} \]
+\form#40:\[ \frac{\delta E_{int}(E')}{E'} = \frac{const.}{\sqrt{E'}} \]
+\form#41:\[ \frac{\partial E'}{\partial E_\gamma}\frac{\delta E_\gamma}{E'} = \frac{\sqrt{1-\beta^2}}{1-\beta cos\theta}\frac{\delta E_\gamma}{E'} = \frac{\delta E_\gamma}{E_\gamma} \]
+\form#42:\[ \frac{\partial E'}{\partial \theta}\frac{\delta \theta}{E'} = \frac{E_\gamma \beta \sqrt{1-\beta^2} sin\theta} {(1-\beta cos\theta)^2} \frac{\delta \theta}{E'} = \frac{\beta sin\theta}{(1-\beta cos\theta)}\delta \theta \]
+\form#43:\[ \frac{\partial E'}{\partial \beta}\frac{\delta \beta}{E'} = \frac{E_\gamma |cos\theta - \beta|} {\sqrt{1-\beta^2}(1-\beta cos\theta)^2}\frac{\delta \beta}{E'} = \frac{|cos \theta - \beta|}{(1-\beta^2)(1-\beta cos\theta)}\delta\beta \]
+\form#44:\[ \frac{\partial E'}{\partial \beta}\frac{\delta\beta}{E'} = \frac{\delta\beta |cos\theta - \beta|}{(1-\beta^2)(1 - \beta cos\theta)} \]
+\form#45:\[ \frac{\delta E_{int}}{E'}(E') = \frac{const.}{\sqrt{E'}} \]
+\form#46:\[ \frac{\delta E'}{E'} = \sqrt{ \left(\frac{\delta E_{int}}{E'}(E')\right)^2 + \left(\frac{\partial E'}{\partial E_\gamma}\frac{\delta E_\gamma}{E'}\right)^2 + \left(\frac{\partial E'}{\partial \theta}\frac{\delta \theta}{E'}\right)^2 + \left(\frac{\partial E'}{\partial \beta}\frac{\delta \beta}{E'}\right)^2 } \]
+\form#47:$\delta \theta$
+\form#48:\[ \frac{\partial E'}{\partial \theta}\frac{\delta\theta}{E'} = \frac{\beta sin\theta}{1-\beta cos\theta}\delta \theta \]
+\form#49:\[ \frac{\delta E'}{E'} = \sqrt{ \left(\frac{\delta E_{int}}{E'}(E')\right)^2 + \left(\frac{\partial E'}{\partial \theta}\frac{\delta \theta}{E'}\right)^2 + \left(\frac{\partial E'}{\partial \beta}\frac{\delta \beta}{E'}\right)^2 } \]
+\form#50:\[ \left(\frac{\partial E'}{\partial E_\gamma}\frac{\delta E_\gamma}{E'}\right)^2 \]
