@@ -3,4 +3,5 @@
 *_cpp.so
 *_C.d
 *_C.so
+*.pcm
 doc/

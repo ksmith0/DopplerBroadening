@@ -3,6 +3,15 @@
 ///	of angle due to doppler broadening.
 /// @author Karl Smith
 
+#include "TROOT.h"
+#include "TClass.h"
+#include "TPad.h"
+#include "TAxis.h"
+
+#if !defined(__CINT__)
+#include "DopplerBroadening.cpp"
+#endif
+
 /// @brief Plots the broadening due to Doppler effects including energy shift, 
 ///	opening angle, and spread in beta values. Also, plots the individual
 ///	components.
@@ -14,8 +23,12 @@
 ///             
 /// @param[in] dBeta The width of the distribution of the beta values.
 /// @return Nothing.
-void DopplerBroadening(const float& energyMeV, const float& beta, const float& dThetaDeg = 0, const float resolutionConst = 1, const float& dBeta = 0) {
-	gROOT->ProcessLine(".L DopplerBroadening.cpp+");
+void DopplerBroadeningCalc(const float& energyMeV, const float& beta, const float& dThetaDeg = 0, const float resolutionConst = 1, const float& dBeta = 0) {
+#ifdef __CINT__
+	if (!TClass::GetDict("DopplerBroadening")) {
+		gROOT->ProcessLine(".L DopplerBroadening.cpp+");
+   }
+#endif
 
 	DopplerBroadening broadening(energyMeV, beta, dThetaDeg, resolutionConst, dBeta);
 
