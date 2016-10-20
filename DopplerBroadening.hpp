@@ -191,7 +191,7 @@ class DopplerBroadening {
 		static Double_t BetaBroadening(Double_t *ang, Double_t *par) {
 			Double_t angleRad = ang[0] * TMath::DegToRad();
 			return ( par[4] * abs( cos(angleRad) - par[1]) / 
-					(( 1 - pow(par[1], 2) ) * ( 1 - par[1] * cos (angleRad) ));
+					( (1 - pow(par[1], 2)) * (1 - par[1] * cos(angleRad)) ) );
 
 		};
 
