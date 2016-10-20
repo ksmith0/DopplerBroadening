@@ -1,0 +1,7 @@
+<map id="DopplerBroadeningCalc" name="DopplerBroadeningCalc">
+<area shape="rect" id="node2" href="$class_doppler_broadening.html#a76556e1d7a16fe357ca8324c013d799d" title="Returns a TF1 describing the change in energy resolution due to gamma energy doppler shift..." alt="" coords="227,5,367,47"/>
+<area shape="rect" id="node4" href="$class_doppler_broadening.html#a347c60d4cbe7799b296c146351a8070f" title="Returns a TF1 describing the change in energy resolution due to gamma energy doppler shift..." alt="" coords="223,71,372,112"/>
+<area shape="rect" id="node5" href="$class_doppler_broadening.html#a72dd0f3f3aefcb6202820ba7fb33f81a" title="Returns a TF1 describing the change in energy resolution due to the solid angle coverage of the detec..." alt="" coords="212,136,383,177"/>
+<area shape="rect" id="node6" href="$class_doppler_broadening.html#a9930774f417d7a5b646c0b9e145026d5" title="Returns a TF1 describing the change in energy resolution due to the distribution of beta values..." alt="" coords="227,201,367,243"/>
+<area shape="rect" id="node3" href="$class_doppler_broadening.html#a94733541cd419404a7bd9403c31af67d" title="Updates the parameters for each TF1 when called. " alt="" coords="431,5,571,47"/>
+</map>

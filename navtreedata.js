@@ -22,7 +22,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_doppler_broadening_8_c.html"
+"_doppler_broadening_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

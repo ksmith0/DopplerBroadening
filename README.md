@@ -4,7 +4,7 @@ Doppler Broadening
 
 The project provide the DopplerBroadening class as well as a simple method to create plots. This method can be envoked from root by the following:
 ```
-.x DopplerBroadening.C(energyMeV, beta, dThetaDeg, resolutionConst, dBeta)
+.x DopplerBroadeningCalc.C(energyMeV, beta, dThetaDeg, resolutionConst, dBeta)
 ```
 where the arguments are as follows:
  * energyMeV The energy of the emitted gamma-ray in MeV.
